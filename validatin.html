@@ -1,10 +1,12 @@
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/validation.css"/>
+    <link rel="stylesheet" href="css/validation.css" />
     <title>validation</title>
 </head>
+
 <body>
     <header>
         <div class="Logo">
@@ -16,23 +18,19 @@
             <button class="upload"><i class="fa-sharp fa-solid fa-cloud-arrow-up"></i> Upload invoice</button>
         </div>
     </header>
-
     <div class="bill">
         <div class="invoice">
-
         </div>
-
         <div class="invoice_write">
             <div class="box">
                 <div class="trust">
                     <div class="trust_word">
                         <span class="thoughts">Trust Score</span>
                         <p>Needs improvements.see below to improve.</p>
-                    </div>    
+                    </div>
                     <div class="progress-bar"></div>
-                </div>    
+                </div>
             </div>
-
             <div class="box1">
                 <div class="section1">
                     <div class="logo_type">
@@ -45,40 +43,35 @@
                                 <div class="upload_file">Upload file</div>
                                 <div class="file_name">JPG,JPEG,PNG,less than 5MB</div>
                             </div>
-                                
                         </button>
                     </div>
-
                     <div class="invoice_number">
                         <p>Invoice number</p>
-                        <input type="text" class="text"/>
+                        <input type="text" class="text" />
                     </div>
                 </div>
-
                 <div class="section2">
                     <div class="logo_type">
                         <p>Your company details</p>
-                        <textarea name="company_name" id="company_name" class="company_name" cols="47" rows="3"></textarea>
+                        <textarea name="company_name" id="company_name" class="company_name" cols="47"
+                            rows="3"></textarea>
                     </div>
-
                     <div class="invoice_number">
                         <p>Bill to</p>
-                        <textarea name="company_name" id="company_bill" class="company_name" cols="47" rows="3"></textarea>
+                        <textarea name="company_name" id="company_bill" class="company_name" cols="47"
+                            rows="3"></textarea>
                     </div>
                 </div>
-
                 <div class="section3">
                     <div class="logo_type">
                         <p>Date issued</p>
-                      <input type="date" class="date_issued">
+                        <input type="date" class="date_issued">
                     </div>
-
                     <div class="invoice_number">
                         <p>Due date</p>
                         <input type="date" class="date_issued">
                     </div>
                 </div>
-
                 <div class="box2">
                     <div class="product_add">
                         <div class="for_index">
@@ -87,72 +80,50 @@
                             <div class="p3">Qty</div>
                             <div class="p4">Amount</div>
                         </div>
-
                         <div id="itemsContainer">
-                            <div class="pro_rate_qty_amt">
-                                <input type="text" class="product"/>
-                                <input type="text" class="rate"/>
-                                <input type="text" class="quantity"/>
-                                <input type="text" class="amount"/>
-                                <i class="fa-solid fa-xmark"></i>
+                            <div class="pro_rate_qty_amt" id="index">
+                                <input type="text" id="product" />
+                                <input type="text" id="rate" />
+                                <input type="text" id="quantity" />
+                                <input type="text" id="amount" />
                             </div>
                         </div>
-
                         <div class="add" onclick="addItems();">
                             <div class="plus">+</div>
                         </div>
                         <div class="add_item">Add item</div>
-                        
                     </div>
                 </div>
-
                 <div class="box3">
                     <div class="notes">
                         <div class="p1">Notes</div>
                         <textarea name="note" id="note" class="company_name" cols="50" rows="3"></textarea>
                     </div>
-
                     <div class="final">
                         <div class="total">
                             <div class="subtotal">Subtotal</div>
-                            <input type="text" class="S_total"/>
+                            <input type="text" class="S_total" />
                         </div>
-                       
                         <div class="box4">
                             <div class="tax">
                                 <label for="tax" class="Tax">Tax</label>
-                                <input type="text" class="Tax_input"/>
+                                <input type="text" class="Tax_input" />
                             </div>
-
                             <div class="tax">
                                 <label for="Discount" class="Discount">Discount</label>
-                                <input type="text" class="discount_input"/>
+                                <input type="text" class="discount_input" />
                             </div>
-
                             <div class="tax">
                                 <p>Shopping free</p>
-                                <input type="text" class="Shoping_free_input"/>
+                                <input type="text" class="Shoping_free_input" />
                             </div>
                         </div>
                     </div>
-                    
-                    
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script>
-    
-    function addItems(){
-        let container = document.getElementById("itemsContainer");
-            container.insertAdjacentHTML("afterend", `<div class="pro_rate_qty_amt">
-                                    <input type="text" class="product"/>
-                                    <input type="text" class="rate"/>
-                                    <input type="text" class="quantity"/>
-                                    <input type="text" class="amount"/>
-                                    <i class="fa-solid fa-xmark"></i>
-                                </div>`);
-    }
-</script>
+<script src="script.js"></script>
+
 </html>
