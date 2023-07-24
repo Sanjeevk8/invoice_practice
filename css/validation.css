@@ -95,12 +95,12 @@ p{
   }
   .section1{
     height: 65px;
-    width: 590px;
+    width: 640px;
     display: flex;
   }
   .image_upload{
     height: 45px;
-    width: 300px;
+    width: 320px;
     display: flex;
     border-radius: 10px;
     border: none;
@@ -117,17 +117,212 @@ p{
     position: absolute;
   }
  .upload_file{
-    height: 30px;
-    width: 72px;
-    position: fixed;
-    padding: 3px 0px 0px 40px;
+    height: 18px;
+    width: 100px; 
+    padding: 3px 0px 0px 0px;
+    font-weight: bold;
+    text-decoration: underline;
  }
  .file_name{
-    padding-top: 20px;
+    padding: 1px 0px 0px 14px;
+    color: grey;
  }
  
  .invoice_number{
   height: 65px;
   width: 390px;
+  margin-left: 10px;
+ }
+ .text{
+  height: 30px;
+  width: 320px;
+  border-radius: 5px;
+  border: 1px solid grey;
  }
 
+.section2{
+  height: 80px;
+  width: 640px;
+  display: flex;
+  margin-top: 10px;
+}
+.company_name{
+  border-radius: 5px;
+}
+
+.section3{
+  height: 55px;
+  width: 640px;
+  display: flex;
+  margin-top: 10px;
+}
+.date_issued{
+  height: 30px;
+  width: 320px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.box2{
+  height: auto;
+  width: 650px;
+  margin-top: 10px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.product_add{
+  padding: 10px;
+}
+.for_index{
+  display: flex;
+}
+.p1{
+    margin-right: 345px;
+    font-size: 12px;
+    color: grey;
+}
+.p2{
+  margin-right: 55px;
+  font-size: 12px;
+  color: grey;
+}
+.p3{
+  margin-right: 55px;
+  font-size: 12px;
+  color: grey;
+}
+.p4{
+  font-size: 12px;
+  color: grey;
+}
+
+.pro_rate_qty_amt{
+  display: flex;
+  margin-top: 5px;
+}
+.product{
+  height: 32px;
+  width: 340px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.rate{
+  height: 32px;
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.quantity{
+  height: 32px;
+  width: 60px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.amount{
+  height: 32px;
+  width: 100px;
+  border-radius: 5px; 
+}
+.fa-xmark{
+  margin: 5px 0px 0px 10px;
+  font-size: 20px;
+}
+.add{
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  justify-content: center;
+  background-color: 0079FF;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 20px 0px 0px 300px;
+
+}
+.plus{
+  height: 30px;
+  width: 30px;
+  padding: 0px 0px 5px 5px;
+  font-size: 30px;
+  color: #fff;
+ 
+}
+.add_item{
+  padding-left: 293px;
+  font-size: 12px;
+  font-weight: bold;
+  color: 0079FF;
+  margin-top: 5px;
+}
+
+.box3{
+  height: auto;
+  width: 643px;
+  margin-top: 10px;
+  display: flex;
+}
+.final{
+  height: 90px;
+  width: 264px;
+}
+.total{
+  height: 30px;
+  width: 180px;
+  display: flex;
+ 
+}
+.subtotal{
+  height: 20px;
+  width: 68px;
+  font-weight: bold;
+}
+.S_total{
+  height: 20px;
+  width: 90px;
+  margin: 0px 0px 0px 80px;
+  border: none;
+}
+.box4{
+  height: 90px;
+  width: 238px;
+ }
+ .tax{
+  display: flex;
+  padding-bottom: 5px;
+ }
+ .Tax{
+  font-size: 12px;
+  color: grey;
+  margin: 2px 0px 0px 23px;
+ 
+ }
+ .Tax_input{
+  height: 25px;
+  width: 110px;
+  margin-left: 60px;
+  border-radius: 5px;
+ }
+ .Discount{
+  font-size: 12px;
+  color: grey;
+  margin: 2px 0px 0px 0px;
+ 
+ }
+ .discount_input{
+  height: 25px;
+  width: 110px;
+  margin-left: 52px;
+  border-radius: 5px;
+ }
+ .Shoping_free{
+  height: 20px;
+  width: 100px;
+  font-size: 12px;
+  color: grey;
+  margin: 2px 0px 0px 0px;
+ }
+ .Shoping_free_input{
+  height: 25px;
+  width: 110px;
+  margin-left: 48px;
+  border-radius: 5px;
+ }

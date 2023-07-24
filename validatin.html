@@ -41,19 +41,118 @@
                             <div class="upload_sticker">
                                 <i class="fa-solid fa-upload"></i>
                             </div>
+                            <div>
                                 <div class="upload_file">Upload file</div>
-                                <p class="file_name">JPG,JPEG,PNG,less than 5MB</p>
+                                <div class="file_name">JPG,JPEG,PNG,less than 5MB</div>
+                            </div>
+                                
                         </button>
                     </div>
 
                     <div class="invoice_number">
                         <p>Invoice number</p>
-                        <input type="text"/>
+                        <input type="text" class="text"/>
                     </div>
                 </div>
-                
+
+                <div class="section2">
+                    <div class="logo_type">
+                        <p>Your company details</p>
+                        <textarea name="company_name" id="company_name" class="company_name" cols="47" rows="3"></textarea>
+                    </div>
+
+                    <div class="invoice_number">
+                        <p>Bill to</p>
+                        <textarea name="company_name" id="company_bill" class="company_name" cols="47" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="section3">
+                    <div class="logo_type">
+                        <p>Date issued</p>
+                      <input type="date" class="date_issued">
+                    </div>
+
+                    <div class="invoice_number">
+                        <p>Due date</p>
+                        <input type="date" class="date_issued">
+                    </div>
+                </div>
+
+                <div class="box2">
+                    <div class="product_add">
+                        <div class="for_index">
+                            <div class="p1">Item</div>
+                            <div class="p2">Rate</div>
+                            <div class="p3">Qty</div>
+                            <div class="p4">Amount</div>
+                        </div>
+
+                        <div id="itemsContainer">
+                            <div class="pro_rate_qty_amt">
+                                <input type="text" class="product"/>
+                                <input type="text" class="rate"/>
+                                <input type="text" class="quantity"/>
+                                <input type="text" class="amount"/>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="add" onclick="addItems();">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="add_item">Add item</div>
+                        
+                    </div>
+                </div>
+
+                <div class="box3">
+                    <div class="notes">
+                        <div class="p1">Notes</div>
+                        <textarea name="note" id="note" class="company_name" cols="50" rows="3"></textarea>
+                    </div>
+
+                    <div class="final">
+                        <div class="total">
+                            <div class="subtotal">Subtotal</div>
+                            <input type="text" class="S_total"/>
+                        </div>
+                       
+                        <div class="box4">
+                            <div class="tax">
+                                <label for="tax" class="Tax">Tax</label>
+                                <input type="text" class="Tax_input"/>
+                            </div>
+
+                            <div class="tax">
+                                <label for="Discount" class="Discount">Discount</label>
+                                <input type="text" class="discount_input"/>
+                            </div>
+
+                            <div class="tax">
+                                <p>Shopping free</p>
+                                <input type="text" class="Shoping_free_input"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    
+    function addItems(){
+        let container = document.getElementById("itemsContainer");
+            container.insertAdjacentHTML("afterend", `<div class="pro_rate_qty_amt">
+                                    <input type="text" class="product"/>
+                                    <input type="text" class="rate"/>
+                                    <input type="text" class="quantity"/>
+                                    <input type="text" class="amount"/>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>`);
+    }
+</script>
 </html>
