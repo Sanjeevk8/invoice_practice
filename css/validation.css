@@ -10,25 +10,25 @@ header{
     background-color: black;
     display: flex;
 }
-.Logo{
+#Logo{
     height: 25px;
     width: 70px;
     margin: 6px 5px 5px 20px;
     display: flex;
 }
-.logo{
+#logo{
     height: 25px;
     width: 30px; 
 }
-.logo_word{
+#logo_word{
     margin-top: 6px;
     margin-left: 2px;
     color: #fff;
 }
-.buttons{
+#buttons{
   margin: 10px 20px 0px 1050px;
 }
-.generate{
+#generate{
     height: 30px;
     width: 80px;
     border-radius: 10px;
@@ -36,7 +36,7 @@ header{
     background-color: 0079FF;
     color: #fff;
 }
-.upload{
+#upload{
     height: 30px;
     width: 130px;
     border-radius: 10px;
@@ -45,29 +45,29 @@ header{
    background-color: rgba(255, 255, 255, 0.3);
    color: #fff;
 }
-.bill{
+#bill{
     display: flex;
 }
-.invoice{
+#invoice{
     height: 590px;
     width: 683px;
     background-color: whitesmoke;
 }
-.invoice_write{
+#invoice_write{
     height: 590px;
     width: 683px;
     background-color: azure;
 }
-.trust{
+#trust{
     height: 60px;
     width: 683px;
     display: flex;
     background-color:aliceblue;
 }
-.trust_word{
+#trust_word{
     margin: 10px 0px 0px 20px;
 }
-.thoughts{
+#thoughts{
     font-size: 14px;
     font-weight: bold;
 }
@@ -75,7 +75,7 @@ p{
     font-size: 12px;
     color: grey; 
 }
-.progress-bar {
+#progress-bar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,147 +87,142 @@ p{
       radial-gradient(closest-side, white 79%, transparent 80% 100%),
       conic-gradient(rgb(255, 189, 6) 75%, pink 0);    
   }
-  .progress-bar::before {
+  #progress-bar::before {
     content: "75%";
   }
-  .box1{
+  #box1{
     margin: 10px 20px 0px 20px;
   }
-  .section1{
+  #section1{
     height: 65px;
     width: 640px;
     display: flex;
   }
-  .image_upload{
+  #image_upload{
     height: 45px;
     width: 320px;
     display: flex;
     border-radius: 10px;
     border: none;
   }
-  .upload_sticker{
+  #upload_sticker{
     height: 40px;
     width: 40px;
-    position: relative;
+    padding: 8px 0px 0px 5px;
+    
   }
-  .fa-upload{
-    padding-top: 10px;
-    font-size: 20px;
-    left: 10;
-    position: absolute;
-  }
- .upload_file{
+ #upload_file{
     height: 18px;
     width: 100px; 
     padding: 3px 0px 0px 0px;
     font-weight: bold;
     text-decoration: underline;
  }
- .file_name{
+ #file_name{
     padding: 1px 0px 0px 14px;
     color: grey;
  }
  
- .invoice_number{
+ #invoice_number{
   height: 65px;
   width: 390px;
   margin-left: 10px;
  }
- .text{
+ #text{
   height: 30px;
   width: 320px;
   border-radius: 5px;
   border: 1px solid grey;
  }
 
-.section2{
+#section2{
   height: 80px;
   width: 640px;
   display: flex;
   margin-top: 10px;
 }
-.company_name{
+#company_name{
   border-radius: 5px;
 }
 
-.section3{
+#section3{
   height: 55px;
   width: 640px;
   display: flex;
   margin-top: 10px;
 }
-.date_issued{
+#date_issued{
   height: 30px;
   width: 320px;
   border-radius: 5px;
   border: 1px solid grey;
 }
 
-.box2{
+#box2{
   height: auto;
   width: 650px;
   margin-top: 10px;
   background-color: whitesmoke;
   border-radius: 10px;
 }
-.product_add{
+#product_add{
   padding: 10px;
 }
-.for_index{
+#for_index{
   display: flex;
 }
-.p1{
+#p1{
     margin-right: 345px;
     font-size: 12px;
     color: grey;
 }
-.p2{
+#p2{
   margin-right: 55px;
   font-size: 12px;
   color: grey;
 }
-.p3{
+#p3{
   margin-right: 55px;
   font-size: 12px;
   color: grey;
 }
-.p4{
+#p4{
   font-size: 12px;
   color: grey;
 }
 
-.pro_rate_qty_amt{
+#pro_rate_qty_amt{
   display: flex;
   margin-top: 5px;
 }
-.product{
+#product{
   height: 32px;
-  width: 340px;
+  width: 330px;
   margin-right: 10px;
   border-radius: 5px;
 }
-.rate{
+#rate{
   height: 32px;
   width: 80px;
   margin-right: 10px;
   border-radius: 5px;
 }
-.quantity{
+#quantity{
   height: 32px;
   width: 60px;
   margin-right: 10px;
   border-radius: 5px;
 }
-.amount{
+#amount{
   height: 32px;
   width: 100px;
   border-radius: 5px; 
 }
-.fa-xmark{
+#fa-xmark{
   margin: 5px 0px 0px 10px;
   font-size: 20px;
 }
-.add{
+#add{
   height: 40px;
   width: 40px;
   text-align: center;
@@ -238,7 +233,7 @@ p{
   margin: 20px 0px 0px 300px;
 
 }
-.plus{
+#plus{
   height: 30px;
   width: 30px;
   padding: 0px 0px 5px 5px;
@@ -246,7 +241,7 @@ p{
   color: #fff;
  
 }
-.add_item{
+#add_item{
   padding-left: 293px;
   font-size: 12px;
   font-weight: bold;
@@ -254,73 +249,73 @@ p{
   margin-top: 5px;
 }
 
-.box3{
+#box3{
   height: auto;
   width: 643px;
   margin-top: 10px;
   display: flex;
 }
-.final{
+#final{
   height: 90px;
   width: 264px;
 }
-.total{
+#total{
   height: 30px;
   width: 180px;
   display: flex;
  
 }
-.subtotal{
+#subtotal{
   height: 20px;
   width: 68px;
   font-weight: bold;
 }
-.S_total{
+#S_total{
   height: 20px;
   width: 90px;
   margin: 0px 0px 0px 80px;
   border: none;
 }
-.box4{
+#box4{
   height: 90px;
   width: 238px;
  }
- .tax{
+ #tax{
   display: flex;
   padding-bottom: 5px;
  }
- .Tax{
+ #Tax{
   font-size: 12px;
   color: grey;
   margin: 2px 0px 0px 23px;
  
  }
- .Tax_input{
+ #Tax_input{
   height: 25px;
   width: 110px;
   margin-left: 60px;
   border-radius: 5px;
  }
- .Discount{
+ #Discount{
   font-size: 12px;
   color: grey;
   margin: 2px 0px 0px 0px;
  
  }
- .discount_input{
+ #discount_input{
   height: 25px;
   width: 110px;
   margin-left: 52px;
   border-radius: 5px;
  }
- .Shoping_free{
+ #Shoping_free{
   height: 20px;
   width: 100px;
   font-size: 12px;
   color: grey;
   margin: 2px 0px 0px 0px;
  }
- .Shoping_free_input{
+ #Shoping_free_input{
   height: 25px;
   width: 110px;
   margin-left: 48px;

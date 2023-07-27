@@ -7,7 +7,7 @@ function addItems() {
                                 `<input type="text" id="product"/>
                                 <input type="text"  id="rate"/>
                                 <input type="text"  id="quantity"/>
-                                <input type="text"  id="amount"/>
+                                <input type="text" onchange="productamt()" id="amount"/>
                                 <i class="fa-solid fa-xmark" onclick="deleteRow(this)"></i>
                             </div>`);
 
@@ -27,4 +27,13 @@ function addItems() {
 function deleteRow(rowElement){
     var parentNode = rowElement.parentNode;
     parentNode.remove();
+}
+
+function productamt(){
+let a=document.getElementById("rate").value;
+let b=document.getElementById("quantity").value;
+let c=document.getElementById("amount");
+// document.getElementById("amount").innerHTML= c;
+let result=a*b;
+c.value=result;
 }

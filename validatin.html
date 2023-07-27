@@ -9,113 +9,113 @@
 
 <body>
     <header>
-        <div class="Logo">
-            <img src="images/logo.png" alt="logo" class="logo">
-            <span class="logo_word">invoicely.ai</span>
+        <div id="Logo">
+            <img src="images/logo.png" alt="logo" id="logo">
+            <span id="logo_word">invoicely.ai</span>
         </div>
-        <div class="buttons">
-            <button class="generate">Generate</button>
-            <button class="upload"><i class="fa-sharp fa-solid fa-cloud-arrow-up"></i> Upload invoice</button>
+        <div id="buttons">
+            <button id="generate">Generate</button>
+            <button id="upload"><i class="fa-sharp fa-solid fa-cloud-arrow-up"></i> Upload invoice</button>
         </div>
     </header>
-    <div class="bill">
-        <div class="invoice">
+    <div id="bill">
+        <div id="invoice">
         </div>
-        <div class="invoice_write">
-            <div class="box">
-                <div class="trust">
-                    <div class="trust_word">
-                        <span class="thoughts">Trust Score</span>
+        <div id="invoice_write">
+            <div id="box">
+                <div id="trust">
+                    <div id="trust_word">
+                        <span id="thoughts">Trust Score</span>
                         <p>Needs improvements.see below to improve.</p>
                     </div>
-                    <div class="progress-bar"></div>
+                    <div id="progress-bar"></div>
                 </div>
             </div>
-            <div class="box1">
-                <div class="section1">
-                    <div class="logo_type">
+            <div id="box1">
+                <div id="section1">
+                    <div id="logo_type">
                         <p>Logo</p>
-                        <button class="image_upload">
-                            <div class="upload_sticker">
-                                <i class="fa-solid fa-upload"></i>
+                        <button id="image_upload">
+                            <div id="upload_sticker">
+                                <i class="fa-solid fa-upload fa-2x"></i>
                             </div>
                             <div>
-                                <div class="upload_file">Upload file</div>
-                                <div class="file_name">JPG,JPEG,PNG,less than 5MB</div>
+                                <div id="upload_file">Upload file</div>
+                                <div id="file_name">JPG,JPEG,PNG,less than 5MB</div>
                             </div>
                         </button>
                     </div>
-                    <div class="invoice_number">
+                    <div id="invoice_number">
                         <p>Invoice number</p>
-                        <input type="text" class="text" />
+                        <input type="text" id="text" />
                     </div>
                 </div>
-                <div class="section2">
-                    <div class="logo_type">
+                <div id="section2">
+                    <div id="logo_type">
                         <p>Your company details</p>
                         <textarea name="company_name" id="company_name" class="company_name" cols="47"
                             rows="3"></textarea>
                     </div>
-                    <div class="invoice_number">
+                    <div id="invoice_number">
                         <p>Bill to</p>
                         <textarea name="company_name" id="company_bill" class="company_name" cols="47"
                             rows="3"></textarea>
                     </div>
                 </div>
-                <div class="section3">
-                    <div class="logo_type">
+                <div id="section3">
+                    <div id="logo_type">
                         <p>Date issued</p>
-                        <input type="date" class="date_issued">
+                        <input type="date" id="date_issued">
                     </div>
-                    <div class="invoice_number">
+                    <div id="invoice_number">
                         <p>Due date</p>
-                        <input type="date" class="date_issued">
+                        <input type="date" id="date_issued">
                     </div>
                 </div>
-                <div class="box2">
-                    <div class="product_add">
-                        <div class="for_index">
-                            <div class="p1">Item</div>
-                            <div class="p2">Rate</div>
-                            <div class="p3">Qty</div>
-                            <div class="p4">Amount</div>
+                <div id="box2">
+                    <div id="product_add">
+                        <div id="for_index">
+                            <div id="p1">Item</div>
+                            <div id="p2">Rate</div>
+                            <div id="p3">Qty</div>
+                            <div id="p4">Amount</div>
                         </div>
                         <div id="itemsContainer">
-                            <div class="pro_rate_qty_amt" id="index">
+                            <!-- <div id="pro_rate_qty_amt" id="index">
                                 <input type="text" id="product" />
                                 <input type="text" id="rate" />
                                 <input type="text" id="quantity" />
                                 <input type="text" id="amount" />
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="add" onclick="addItems();">
-                            <div class="plus">+</div>
+                        <div id="add" onclick="addItems();">
+                            <div id="plus">+</div>
                         </div>
-                        <div class="add_item">Add item</div>
+                        <div id="add_item">Add item</div>
                     </div>
                 </div>
-                <div class="box3">
-                    <div class="notes">
-                        <div class="p1">Notes</div>
-                        <textarea name="note" id="note" class="company_name" cols="50" rows="3"></textarea>
+                <div id="box3">
+                    <div id="notes">
+                        <div id="p1">Notes</div>
+                        <textarea name="note" id="company_name" class="company_name" cols="50" rows="3"></textarea>
                     </div>
-                    <div class="final">
-                        <div class="total">
-                            <div class="subtotal">Subtotal</div>
-                            <input type="text" class="S_total" />
+                    <div id="final">
+                        <div id="total">
+                            <div id="subtotal">Subtotal</div>
+                            <input type="text" id="S_total" />
                         </div>
-                        <div class="box4">
-                            <div class="tax">
-                                <label for="tax" class="Tax">Tax</label>
-                                <input type="text" class="Tax_input" />
+                        <div id="box4">
+                            <div id="tax">
+                                <label for="tax" id="Tax">Tax</label>
+                                <input type="text" id="Tax_input" />
                             </div>
-                            <div class="tax">
-                                <label for="Discount" class="Discount">Discount</label>
-                                <input type="text" class="discount_input" />
+                            <div id="tax">
+                                <label for="Discount" id="Discount">Discount</label>
+                                <input type="text" id="discount_input" />
                             </div>
-                            <div class="tax">
+                            <div id="tax">
                                 <p>Shopping free</p>
-                                <input type="text" class="Shoping_free_input" />
+                                <input type="text" id="Shoping_free_input" />
                             </div>
                         </div>
                     </div>
