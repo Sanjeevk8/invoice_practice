@@ -12,7 +12,7 @@ function addItems() {
                                 `<input type="text" id="product"/>
                                 <input type="text"  id="rate"/>
                                 <input type="text"  id="quantity"/>
-                                <input type="text"  id="amount"/>
+                                <input onblur="getAllAmountSetChange()" type="text"  id="amount"/>
                                 <i class="fa-solid fa-xmark" onclick="deleteRow(this)"></i>
                                 </div>`);
 
@@ -33,6 +33,7 @@ function rateFunc(index) {
 
 function qtyFunc(index){
     var indexName = getIndexRowNamed(index)
+    document.querySelector(indexName + "> #amount").readOnly = true;
     var initialQyt = document.querySelector(indexName + "> #quantity").value;
     
     if(initialQyt == ""){
@@ -54,15 +55,21 @@ function amountField(index){
     document.querySelector(indexName + "> #amount").value = totalAmt;
 
 
-    var amount = document.querySelector(indexName + "> #amount  ");
+    // var amount = document.querySelector(indexName + "> #amount  ");
     
     getAllAmountSetChange();
 }
 
 function getAllAmountSetChange(){
-   var amountFieldList =  document.querySelectorAll("#amount");
-   // refresh subtotal elements
-   console.log(amountFieldList);
+   var arr =  document.getElementById("amount");
+   var tot=0;
+   for(i=0; i<arr.lenght; i++){
+    if(arr[i].value)
+        tot +=arr[i].value;
+    }
+   // refresh subtotal element
+   document.getElementById("S_total").value = tot;
+   
 }
 
 
@@ -73,15 +80,7 @@ function getIndexRowNamed(index) {
 function deleteRow(rowElement) {
     var parentNode = rowElement.parentNode;
     parentNode.remove();
-}
-
-function productamt() {
-    let a = document.getElementById("rate").value;
-    let b = document.getElementById("quantity").value;
-    let c = document.getElementById("amount");
-    // document.getElementById("amount").innerHTML= c;
-    let result = a * b;
-    c.value = result;
+   
 }
 
 rateFunc(0);
