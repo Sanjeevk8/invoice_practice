@@ -52,24 +52,25 @@ function amountField(index){
     var currentQty = document.querySelector(indexName + "> #quantity").value;
     var totalAmt = rate * currentQty;
 
+    document.getElementsByName
     document.querySelector(indexName + "> #amount").value = totalAmt;
 
-
-    // var amount = document.querySelector(indexName + "> #amount  ");
-    
+    // refersh data
     getAllAmountSetChange();
 }
 
 function getAllAmountSetChange(){
-   var arr =  document.getElementById("amount");
+   var arr =  document.querySelectorAll("#amount");
    var tot=0;
-   for(i=0; i<arr.lenght; i++){
+   for(i=0; i<arr.length; i++){
     if(arr[i].value)
-        tot +=arr[i].value;
+        tot += parseInt(arr[i].value);
     }
    // refresh subtotal element
    document.getElementById("S_total").value = tot;
    
+   // other amounts calculation code here
+
 }
 
 
