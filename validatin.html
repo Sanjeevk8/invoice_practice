@@ -20,7 +20,67 @@
     </header>
     <div id="bill">
         <div id="invoice">
+            <div id="box01">
+                <div id="box02">
+                    <div id="section01">
+                        <span class="INVOICE">INVOICE</span>
+                        <span class="muse">muse</span>
+                        <span class="mind">mind</span>
+                    </div>
+
+                    <div>
+                        <input type="text" id="invoice_num"/>
+                    </div>
+
+                    <div id="section02">
+                        <div>
+                            <input type="text" id="bill_issued_company"/>
+                        </div>
+
+                        <div>
+                            <input type="text" id="to_bill"/>
+                        </div>
+                    </div>
+
+                    <div id="section03">
+                        <table cellpadding="0" cellspacing="10" width="100%" height="8%" style="border: 1px;" rules="none">
+                            <thead style="background-color: rgb(235, 219, 219);">
+                              <tr>
+                                <th style="width: 206px; height: 25px; text-align: left; font-size: 10px; color: grey; padding-left: 15px;">Delivrable</th>
+                                <th style="width: 50px; height: 25px; text-align: right; font-size: 10px; color: grey; padding-right: 15px;">Rate</th>
+                                <th style="width: 36px; height: 25px; text-align: right; font-size: 10px; color: grey;">Qty</th>
+                                <th style="width: 100px; height: 25px; text-align: right; font-size: 10px; color: grey; padding-right: 15px;">Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody style="background-color: rgb(213, 213, 235);">
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="section04">
+                        <div id="section_subtotal">
+                            <div id="Sub_total">
+                                <span id="Sub_total">Subtotal</span>
+                            </div>
+                            <div id="invoice_sub_total">
+                                <span id="invoice_sub_total">140</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+
+
+
         <div id="invoice_write">
             <div id="box">
                 <div id="trust">
@@ -86,7 +146,7 @@
                                 <input type="text" id="rate" />
                                 <input type="text" id="quantity" />
                                 <input type="text" id="amount"/>
-                                <i class="fa-solid fa-xmark"></i>
+                                <!-- <i class="fa-solid fa-xmark"></i> -->
                             </div>
                         </div>
                         <div id="add" onclick="addItems();">
@@ -103,20 +163,20 @@
                     <div id="final">
                         <div id="total">
                             <div id="subtotal">Subtotal</div>
-                            <input type="text" id="S_total"/>
+                            <span id="S_total"></span>
                         </div>
                         <div id="box4">
                             <div id="tax">
                                 <label for="tax" id="Tax">Tax</label>
-                                <input type="text" id="Tax_input" />
+                                <span id="Tax_input"></span>
                             </div>
                             <div id="tax">
                                 <label for="Discount" id="Discount">Discount</label>
-                                <input type="text" id="discount_input" />
+                                <span id="discount_input"></span>
                             </div>
                             <div id="tax">
-                                <p>Shopping free</p>
-                                <input type="text" id="Shoping_free_input" />
+                                <label for="Discount" id="Shiping_fee">Shiping fee</label>
+                                <span id="Shoping_free_input"></span>                            
                             </div>
                         </div>
                     </div>

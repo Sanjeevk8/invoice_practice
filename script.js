@@ -13,7 +13,7 @@ function addItems() {
                                 <input type="text"  id="rate"/>
                                 <input type="text"  id="quantity"/>
                                 <input onblur="getAllAmountSetChange()" type="text"  id="amount"/>
-                                <i class="fa-solid fa-xmark" onclick="deleteRow(this)"></i>
+                                <i class="fa-solid fa-xmark" style="color: #959797;" onclick="deleteRow(this)"></i>
                                 </div>`);
 
     rateFunc(flag);
@@ -52,8 +52,7 @@ function amountField(index){
     var currentQty = document.querySelector(indexName + "> #quantity").value;
     var totalAmt = rate * currentQty;
 
-    document.getElementsByName
-    document.querySelector(indexName + "> #amount").value = totalAmt;
+    document.querySelector(indexName + "> #amount").value =totalAmt;
 
     // refersh data
     getAllAmountSetChange();
@@ -67,10 +66,14 @@ function getAllAmountSetChange(){
         tot += parseInt(arr[i].value);
     }
    // refresh subtotal element
-   document.getElementById("S_total").value = tot;
-   
-   // other amounts calculation code here
-
+   document.getElementById("S_total").innerHTML ="$" +tot;
+ // other amounts calculation code here
+    let gettax = (tot*tax)/100;
+    document.querySelector("#Tax_input").innerHTML ="$" + gettax;
+    let getdis = (tot*discount)/100;
+    document.querySelector("#discount_input").innerHTML ="$" + getdis;
+    let getshipping = tot+shippingFee;
+    document.querySelector("#Shoping_free_input").innerHTML ="$" + getshipping;
 }
 
 
