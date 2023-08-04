@@ -19,6 +19,9 @@
         </div>
     </header>
     <div id="bill">
+
+<!-- invoice read -->
+
         <div id="invoice">
             <div id="box01">
                 <div id="box02">
@@ -29,21 +32,21 @@
                     </div>
 
                     <div>
-                        <input type="text" id="invoice_num"/>
+                        <input type="text" id="invoice_num" disabled/>
                     </div>
 
                     <div id="section02">
-                        <div>
-                            <input type="text" id="bill_issued_company"/>
+                        <div id="bill_issued_company">
+                            <span id="bill_issued_company"></span>
                         </div>
 
-                        <div>
-                            <input type="text" id="to_bill"/>
+                        <div id="to_bill">
+                            <span id="to_bill"></span>
                         </div>
                     </div>
 
                     <div id="section03">
-                        <table cellpadding="0" cellspacing="10" width="100%" height="8%" style="border: 1px;" rules="none">
+                        <table id="items_table" cellpadding="0" cellspacing="10" width="100%" height="8%" style="border: 1px;" rules="none">
                             <thead style="background-color: rgb(235, 219, 219);">
                               <tr>
                                 <th style="width: 206px; height: 25px; text-align: left; font-size: 10px; color: grey; padding-left: 15px;">Delivrable</th>
@@ -53,12 +56,12 @@
                               </tr>
                             </thead>
                             <tbody style="background-color: rgb(213, 213, 235);">
-                              <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                              </tr>
+                              <!-- <tr>
+                                <td>123</td>
+                                <td>123</td>
+                                <td>123</td>
+                                <td>123</td>
+                              </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -69,17 +72,90 @@
                                 <span id="Sub_total">Subtotal</span>
                             </div>
                             <div id="invoice_sub_total">
-                                <span id="invoice_sub_total">140</span>
+                                <span id="invoice_sub_total" class="S_total"></span>
+                            </div>
+                        </div>
+
+                        <div id="section_subtotal">
+                            <div id="Sub_total">
+                                <span id="Sub_total">Tax</span>
+                            </div>
+                            <div id="invoice_sub_total">
+                                <span id="invoice_sub_tax" class="Tax_input">$0</span>
+                            </div>
+                        </div>
+
+                        <div id="section_subtotal">
+                            <div id="Sub_total">
+                                <span id="Sub_total">Discount</span>
+                            </div>
+                            <div id="invoice_sub_total">
+                                <span id="invoice_sub_discount" class="discount_input">$0</span>
+                            </div>
+                        </div>
+
+                        <div id="section_subtotal">
+                            <div id="Sub_total">
+                                <span id="Sub_total">Shoping fee</span>
+                            </div>
+                            <div id="invoice_sub_total">
+                                <span id="invoice_sub_shoping_fee" class="Shoping_free_input">$0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="section05">
+                        <div id="Note">
+                            <span id="NOTES">NOTES</span>
+                        </div>
+
+                        <div id="notes_span">
+                            <span id="notes_span">Pay withhin 15 days.Thank you for business with us.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="box03">
+                    <div id="section06">
+                        <div id="invoice_details_section">
+                            <span id="Invoice_Details">Invoice Details</span>
+                            
+                           <div>
+                                <span id="Date_issued_span">Date issue</span>
+                                <span id="issuing_date"></span>
+                           </div>
+                           <div>
+                                <span id="Due_date_span">Due date</span>
+                                <span id="last_date" ></span>
+                           </div>
+                        </div>
+                       
+                        <div id="t_amount">
+                            <div id="Total_amount_span">
+                                <span id="Total_amount_span">
+                                    Total amount
+                                </span>
+                            </div>
+                            <div id="Total_amount_price">
+                                <span id="Total_amount_price">
+                                    $0
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div id="save_send_button_section">
+                <div id="save_send_button">
+                    <button id="save">Save</button>
+                    <button id="save_send">Save and Send</button>
+                </div>
+            </div>
         </div>
 
 
-
+<!-- invoice write -->
 
         <div id="invoice_write">
             <div id="box">
@@ -107,29 +183,29 @@
                     </div>
                     <div id="invoice_number">
                         <p>Invoice number</p>
-                        <input type="text" id="text" />
+                        <input type="text" id="invoice_number_write" onkeyup="handleInvoiceNumber(this.value);" />
                     </div>
                 </div>
                 <div id="section2">
                     <div id="logo_type">
                         <p>Your company details</p>
-                        <textarea name="company_name" id="company_name" class="company_name" cols="47"
-                            rows="3"></textarea>
+                        <textarea name="company_name" id="company_name" class="company_name" cols="49"
+                            rows="3" onkeyup="handleCompanyDetails(this.value)"></textarea>
                     </div>
                     <div id="invoice_number">
                         <p>Bill to</p>
-                        <textarea name="company_name" id="company_bill" class="company_name" cols="47"
-                            rows="3"></textarea>
+                        <textarea name="company_name" id="company_bill" class="company_bill" cols="50"
+                            rows="3" onkeyup="handleCompanyBill(this.value)"></textarea>
                     </div>
                 </div>
                 <div id="section3">
                     <div id="logo_type">
                         <p>Date issued</p>
-                        <input type="date" id="date_issued">
+                        <input type="date" id="date_issued" onchange="handleCompanyIssuedDate(this.value)">
                     </div>
                     <div id="invoice_number">
                         <p>Due date</p>
-                        <input type="date" id="date_issued">
+                        <input type="date" id="date_issued" onchange="handleCompanyDueDate(this.value)">
                     </div>
                 </div>
                 <div id="box2">
@@ -141,12 +217,12 @@
                             <div id="p4">Amount</div>
                         </div>
                         <div id="itemsContainer">
-                            <div id="index">
-                                <input type="text" id="product" />
-                                <input type="text" id="rate" />
-                                <input type="text" id="quantity" />
-                                <input type="text" id="amount"/>
-                                <!-- <i class="fa-solid fa-xmark"></i> -->
+                            <div id="index-1">
+                                <input type="text" class="product" id="item_product_1"/>
+                                <input type="text" class="rate" onkeyup="handleItemRateChange(event)" oninput="acceptOnlyNumbers(event)" id="item_rate_1" value="$0" />
+                                <input type="text" class="quantity" onkeyup="handleItemQtyChange(event)" oninput="acceptOnlyNumbersQTY(event)" id="item_qty_1" value="0" />
+                                <input type="text" disabled class="amount" id="item_amt_1" value="$0"/>
+                                <i class="fa-solid fa-xmark" style="color: #959797;" onclick="deleteRow(this)"></i>
                             </div>
                         </div>
                         <div id="add" onclick="addItems();">
@@ -158,25 +234,25 @@
                 <div id="box3">
                     <div id="notes">
                         <div id="p1">Notes</div>
-                        <textarea name="note" id="company_name" class="company_name" cols="50" rows="3"></textarea>
+                        <textarea name="note" id="company_name" class="company_name" cols="50" rows="3">Pay withhin 15 days.Thank you for business with us.</textarea>
                     </div>
                     <div id="final">
                         <div id="total">
                             <div id="subtotal">Subtotal</div>
-                            <span id="S_total"></span>
+                            <span id="S_total" class="S_total">$0</span>
                         </div>
                         <div id="box4">
                             <div id="tax">
                                 <label for="tax" id="Tax">Tax</label>
-                                <span id="Tax_input"></span>
+                                <span id="Tax_input" class="Tax_input">$0</span>
                             </div>
                             <div id="tax">
                                 <label for="Discount" id="Discount">Discount</label>
-                                <span id="discount_input"></span>
+                                <span id="discount_input" class="discount_input">$0</span>
                             </div>
                             <div id="tax">
                                 <label for="Discount" id="Shiping_fee">Shiping fee</label>
-                                <span id="Shoping_free_input"></span>                            
+                                <span id="Shoping_free_input" class="Shoping_free_input">$0</span>                            
                             </div>
                         </div>
                     </div>

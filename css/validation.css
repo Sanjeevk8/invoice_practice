@@ -129,11 +129,12 @@ p{
   width: 390px;
   margin-left: 10px;
  }
- #text{
+ #invoice_number_write{
   height: 30px;
   width: 320px;
   border-radius: 5px;
   border: 1px solid grey;
+  padding-left: 5px;
  }
 
 #section2{
@@ -144,6 +145,15 @@ p{
 }
 #company_name{
   border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding-left: 5px;
+}
+#company_bill{
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding-left: 5px;
 }
 
 #section3{
@@ -200,35 +210,39 @@ p{
   /* display: flex; */
   padding-top: 5px;
 }
-#product{
+.product{
   height: 32px;
   width: 330px;
   margin-right: 10px;
   border-radius: 5px;
   border-color: whitesmoke;
-  
+  padding-left: 5px;
 }
-#rate{
+.rate{
   height: 32px;
   width: 80px;
   margin-right: 10px;
+  align-items: center;
   border-radius: 5px;
   border-color: whitesmoke;
+  text-align: center;
 }
-#quantity{
+.quantity{
   height: 32px;
   width: 60px;
   margin-right: 10px;
   border-radius: 5px;
   border-color: whitesmoke;
+  text-align: center;
 }
-#amount{
+.amount{
   height: 32px;
   width: 100px;
   border-radius: 5px; 
   border-color: whitesmoke;
+  text-align: center;
 }
-input[type=text] { text-align:center }
+/* input[type=text] { text-align:center } */
 #fa-xmark{
   margin: 5px 0px 0px 10px;
   font-size: 20px;
@@ -357,7 +371,7 @@ padding-bottom: 5px;
  #box02{
   height: auto;
   width: 480px;
-  margin: 30px 40px;
+  margin: 30px 40px 0px 40px;
  }
  #section01{
   height: 25px;
@@ -393,13 +407,15 @@ padding-bottom: 5px;
  #bill_issued_company{
   height: 50px;
   width: 110px;
-  text-align: left;
+  background-color: rgb(213, 213, 235);
+  font-size: 12px;
  }
  #to_bill{
   height: 50px;
   width: 110px;
   margin-left: 160px;
-  text-align: left;
+  background-color: rgb(213, 213, 235);
+  font-size: 12px;
  }
  #section03{
   height: auto;
@@ -409,24 +425,175 @@ padding-bottom: 5px;
   border: none;
  }
 #section04{
-  height: 30px;
-  width: 250px;
-  margin-top: 10px;
+  height: auto;
+  width: 200px;
+  margin: 10px 0px 0px 280px;
 }
 #section_subtotal{
   display: flex;
 }
 #Sub_total{
-height: 30px;
-width: 125px;
+height: 25px;
+width: 75px;
 text-align: right;
-font-size: 12px;
+font-size: 10px;
 color: grey;
 }
 #invoice_sub_total{
-  height: 30px;
-  width: 125px;
+  height: 25px;
+  width: 100px;
   text-align: right;
   font-size: 14px;
   font-weight: 600;
+  font-size: 12px;
+}
+
+#section05{
+  height: 55px;
+  width: 560px;
+  margin-top: 60px;
+}
+#NOTES{
+  font-size: 10px;
+  color: grey;
+  font-weight: 600;
+}
+#notes_span{
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+#box03{
+  height: 100px;
+  width: 560px;
+  background-color: 0079FF;
+}
+#section06{
+  height: 80px;
+  width: 500px;
+  padding: 20px;
+  display: flex;
+}
+#invoice_details_section{
+  height: 70px;
+  width: 40%;
+}
+#Invoice_Details{
+  font-size: 10px;
+  color: #fff;
+}
+#Date_issued_span{
+  font-size: 10px;
+  color: whitesmoke;
+}
+#issuing_date{
+  font-size: 10px;
+  color: grey;
+}
+#Due_date_span{
+  font-size: 10px;
+  color: whitesmoke;
+}
+#last_date{
+  font-size: 10px;
+  color: grey;
+}
+#t_amount{
+  height: 70px;
+  width: 60%;
+  flex: 1; 
+  text-align: right; 
+  white-space: nowrap;
+}
+#Total_amount_span{
+  height: 20px;
+  width: 100%;
+  font-size: 10px;
+  color: #fff;
+  text-align: right;
+}
+#Total_amount_price{
+  height: 25px;
+  width: 100%;
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  text-align: right;
+}
+
+#save_send_button_section{
+  height: 60px;
+  width: 666px;
+  margin-top: 30px;
+  background-color: rgb(235, 228, 228);
+}
+#save_send_button{
+  height: 40px;
+  width: 646px;
+  padding: 15px 20px 0px 385px;
+}
+#save{
+  height: 35px;
+  width: 60px;
+  background-color: #fff;
+  color: 0079FF;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+}
+#save_send{
+  height: 35px;
+  width: 150px;
+  background-color: 0079FF;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  margin-left: 10px;
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+td:nth-child(1) {
+  text-align: left;
+  padding-left: 15px;
+  font-size: 12px;
+  color: grey;
+}
+td:nth-child(2) {
+  text-align: right;
+  padding-right: 15px;
+  font-size: 12px;
+  color: grey;
+}
+td:nth-child(3) {
+  text-align: right;
+  font-size: 12px;
+  color: grey;
+}
+td:nth-child(4) {
+  text-align: right;
+  padding-right: 15px;
+  font-size: 12px;
+  color: grey;
+}
+
+.fa-solid {
+  cursor: pointer;
+}
+
+.fa-solid:hover {
+  background-color: red;
 }
